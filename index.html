@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Maxrichie — a Singapore-based AI startup building the next generation of intelligent systems." />
+<meta name="theme-color" content="#0b0f0a" />
+<title>maxrichie.ai // root@maxrichie:~$</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230b0f0a'/%3E%3Ctext x='50%25' y='58%25' font-family='monospace' font-size='44' font-weight='700' fill='%2300ff9c' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <canvas id="matrix" aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <main class="terminal" id="terminal" role="main" aria-label="Maxrichie terminal interface">
+    <header class="bar">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+      <span class="title">root@maxrichie:~ — zsh — 120×40</span>
+      <span class="meta"><span id="clock">--:--:--</span> · SGT</span>
+    </header>
+
+    <section class="screen" id="screen">
+<pre class="ascii" aria-label="Maxrichie ASCII logo">
+███╗   ███╗ █████╗ ██╗  ██╗██████╗ ██╗ ██████╗██╗  ██╗██╗███████╗
+████╗ ████║██╔══██╗╚██╗██╔╝██╔══██╗██║██╔════╝██║  ██║██║██╔════╝
+██╔████╔██║███████║ ╚███╔╝ ██████╔╝██║██║     ███████║██║█████╗
+██║╚██╔╝██║██╔══██║ ██╔██╗ ██╔══██╗██║██║     ██╔══██║██║██╔══╝
+██║ ╚═╝ ██║██║  ██║██╔╝ ██╗██║  ██║██║╚██████╗██║  ██║██║███████╗
+╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝╚══════╝
+                          a i   ·   s i n g a p o r e
+</pre>
+
+      <div class="boot" id="boot" aria-hidden="true"></div>
+
+      <div class="welcome" id="welcome" hidden>
+        <p>Welcome to <span class="g">maxrichie.ai</span> — a Singapore-based AI lab.</p>
+        <p>Type <span class="g">help</span> to see what we do. Try <span class="g">about</span>, <span class="g">team</span>, <span class="g">mission</span>, <span class="g">contact</span>.</p>
+        <p class="dim">Tip: ↑/↓ command history · Tab autocomplete · type <span class="g">matrix</span> for fun.</p>
+      </div>
+
+      <div id="history" class="history" aria-live="polite"></div>
+
+      <form id="prompt-form" class="prompt-line" autocomplete="off">
+        <label for="prompt-input" class="ps1"><span class="user">root</span><span class="at">@</span><span class="host">maxrichie</span>:<span class="path">~</span>$&nbsp;</label>
+        <input id="prompt-input" type="text" name="cmd" autocapitalize="off" autocorrect="off" spellcheck="false" autofocus />
+        <span class="caret" aria-hidden="true">▍</span>
+      </form>
+    </section>
+
+    <footer class="statusbar" aria-hidden="true">
+      <span class="status-item ok">● ONLINE</span>
+      <span class="status-item">SG · Singapore</span>
+      <span class="status-item">utf-8</span>
+      <span class="status-item">v0.1.0</span>
+      <span class="status-item right">© 2026 Maxrichie</span>
+    </footer>
+  </main>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

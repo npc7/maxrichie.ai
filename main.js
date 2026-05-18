@@ -59,54 +59,32 @@
     },
 
     about: {
-      desc: 'who we are',
+      desc: 'who is behind this',
       run: () => `
 <div class="box">
-<h3>// ABOUT MAXRICHIE</h3>
-<p>Maxrichie is a <span class="g">Singapore-based AI startup</span> building the next generation of intelligent systems.</p>
-<p>We work at the intersection of <span class="amber">applied research</span>, <span class="amber">product engineering</span>, and <span class="amber">agentic infrastructure</span>.</p>
-<p>Small team. Big ambitions. Built in Asia, for the world.</p>
+<h3>// ABOUT</h3>
+<p>Hi, I'm <span class="g">Max</span> — a serial entrepreneur based in <span class="g">Singapore</span>, now focused on building in <span class="amber">AI</span>.</p>
+<p>Maxrichie is the home for what I'm working on next. More to share soon.</p>
 </div>`
     },
 
     mission: {
-      desc: 'our mission',
+      desc: 'what i care about',
       run: () => `
 <div class="box">
 <h3>// MISSION</h3>
-<p>Make advanced AI <span class="g">useful</span>, <span class="g">trustworthy</span>, and <span class="g">accessible</span> — not just impressive on a benchmark.</p>
-<p>We believe the next wave of value comes from agents that <span class="amber">act</span>, not just chat.</p>
+<p>Build AI products that are <span class="g">useful</span> — small team, fast iteration, real users.</p>
 </div>`
     },
 
-    team: {
-      desc: 'meet the team',
+    projects: {
+      desc: 'what we are building',
       run: () => `
-<div class="grid">
-  <div class="box">
-    <h3>// FOUNDERS</h3>
-    <p>Engineers, researchers, and builders shipping AI products in production.</p>
-  </div>
-  <div class="box">
-    <h3>// HQ</h3>
-    <p>Singapore 🇸🇬 — with collaborators across APAC.</p>
-  </div>
-  <div class="box">
-    <h3>// HIRING</h3>
-    <p>We are <span class="g">always</span> talking to exceptional people.<br/>Reach out: <a href="mailto:hello@maxrichie.ai">hello@maxrichie.ai</a></p>
-  </div>
+<div class="box">
+<h3>// PROJECTS</h3>
+<p><span class="amber">[coming soon]</span> — project details will be added here as they go live.</p>
+<p class="dim">Want a preview? Drop a line: <a href="mailto:max@maxrichie.ai">max@maxrichie.ai</a></p>
 </div>`
-    },
-
-    stack: {
-      desc: 'tech we love',
-      run: () => `
-<p>Things we build with:</p>
-<p>
-<span class="tag">LLMs</span><span class="tag">Agents</span><span class="tag">RAG</span><span class="tag">Vector DBs</span>
-<span class="tag">PyTorch</span><span class="tag">TypeScript</span><span class="tag">Rust</span><span class="tag">Go</span>
-<span class="tag">k8s</span><span class="tag">GCP</span><span class="tag">AWS</span><span class="tag">Edge</span>
-</p>`
     },
 
     contact: {
@@ -115,10 +93,8 @@
 <div class="box">
 <h3>// CONTACT</h3>
 <table class="kv">
-  <tr><td>email</td><td><a href="mailto:hello@maxrichie.ai">hello@maxrichie.ai</a></td></tr>
-  <tr><td>careers</td><td><a href="mailto:careers@maxrichie.ai">careers@maxrichie.ai</a></td></tr>
-  <tr><td>github</td><td><a href="https://github.com/npc7/maxrichie.ai" target="_blank" rel="noopener">github.com/npc7/maxrichie.ai</a></td></tr>
-  <tr><td>location</td><td>Singapore</td></tr>
+  <tr><td>email</td><td><a href="mailto:max@maxrichie.ai">max@maxrichie.ai</a></td></tr>
+  <tr><td>location</td><td>Singapore 🇸🇬</td></tr>
 </table>
 </div>`
     },
@@ -139,7 +115,7 @@
 
     ls: {
       desc: 'list sections',
-      run: () => `<span class="g">about</span>  <span class="g">mission</span>  <span class="g">team</span>  <span class="g">stack</span>  <span class="g">contact</span>`
+      run: () => `<span class="g">about</span>  <span class="g">mission</span>  <span class="g">projects</span>  <span class="g">contact</span>`
     },
 
     cat: {
@@ -200,9 +176,9 @@
         const q = args.join(' ').trim();
         if (!q) return 'usage: ai &lt;your message&gt;';
         const responses = [
-          `processing "${escape(q)}" … <span class="g">done</span>. (this is a static demo — talk to us at <a href="mailto:hello@maxrichie.ai">hello@maxrichie.ai</a>)`,
-          `Hmm. "${escape(q)}" is an interesting one. The real model lives behind <a href="mailto:hello@maxrichie.ai">hello@</a>.`,
-          `42. Also: you should email us — <a href="mailto:hello@maxrichie.ai">hello@maxrichie.ai</a>.`,
+          `processing "${escape(q)}" … <span class="g">done</span>. (this is a static demo — ping Max at <a href="mailto:max@maxrichie.ai">max@maxrichie.ai</a>)`,
+          `Hmm. "${escape(q)}" is an interesting one. The real model lives behind <a href="mailto:max@maxrichie.ai">max@</a>.`,
+          `42. Also: you should email Max — <a href="mailto:max@maxrichie.ai">max@maxrichie.ai</a>.`,
         ];
         return responses[Math.floor(Math.random() * responses.length)];
       }
